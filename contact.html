@@ -233,7 +233,7 @@ https://www.tooplate.com/view/2114-pixie
                     </div>
                     <div class="col-md-5">
                       <fieldset>
-                        <button type="submit" id="form-submit" class="button">
+                        <button type="button" id="form-submit" class="button">
                           Subscribe Now!
                         </button>
                       </fieldset>
@@ -358,7 +358,9 @@ https://www.tooplate.com/view/2114-pixie
           From: "nstinfotech.com@gmail.com",
           Subject: subject,
           Body: body,
-        }).then((message) => alert(message));
+        })
+          .then((message) => alert("Email sent successfully!"))
+          .catch((error) => alert("Error: " + error));
       }
     </script>
   </body>
