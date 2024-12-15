@@ -114,7 +114,39 @@ https://www.tooplate.com/view/2114-pixie
           <div class="col-md-6">
             <div class="right-content">
               <div class="container">
-                <form onsubmit="return false;">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                  <!-- Replace with your Access Key -->
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="9dec6680-7a53-4c86-b22e-2349ebb06365"
+                  />
+
+                  <!-- Form Inputs. Each input must have a name="" attribute -->
+                  <input type="text" name="name" required />
+                  <input type="email" name="email" required />
+                  <textarea name="message" required></textarea>
+
+                  <!-- Honeypot Spam Protection -->
+                  <input
+                    type="checkbox"
+                    name="botcheck"
+                    class="hidden"
+                    style="display: none"
+                  />
+
+                  <!-- Custom Confirmation / Success Page -->
+                  <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+                  <button type="submit">Submit Form</button>
+                </form>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                  <!-- Replace with your Access Key -->
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="9dec6680-7a53-4c86-b22e-2349ebb06365"
+                  />
                   <div class="row">
                     <div class="col-md-6">
                       <fieldset>
@@ -327,7 +359,7 @@ https://www.tooplate.com/view/2114-pixie
         }
       }
     </script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
       function Send() {
         var name = document.getElementById("name").value;
@@ -357,6 +389,6 @@ https://www.tooplate.com/view/2114-pixie
           Port: 587,
         }).then((message) => alert(message));
       }
-    </script>
+    </script> -->
   </body>
 </html>
