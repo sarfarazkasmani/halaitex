@@ -335,29 +335,29 @@ https://www.tooplate.com/view/2114-pixie
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
       function Send() {
-        // var name = document.getElementById("name").value;
-        // var email = document.getElementById("email").value;
-        // var subject = document.getElementById("subject").value;
-        // var message = document.getElementById("message").value;
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var subject = document.getElementById("subject").value;
+        var message = document.getElementById("message").value;
 
-        // var body =
-        //   "Name:" +
-        //   name +
-        //   "<br /> Email:" +
-        //   email +
-        //   "<br /> Subject:" +
-        //   subject +
-        //   "<br /> Message:" +
-        //   message;
-        // console.log(body);
+        var body =
+          "Name:" +
+          name +
+          "<br /> Email:" +
+          email +
+          "<br /> Subject:" +
+          subject +
+          "<br /> Message:" +
+          message;
+        console.log(body);
         Email.send({
           Host: "smtp.mailendo.com",
           Username: "nstinfotech.com@gmail.com",
           Password: "FEA2CC7BBB189AC1C6EF26B667036FF231E1",
           To: "nstinfotech.com@gmail.com",
           From: "nstinfotech.com@gmail.com",
-          Subject: "This is the subject",
-          Body: "And this is the body",
+          Subject: subject,
+          Body: body,
         }).then((message) => alert(message));
       }
     </script>
